@@ -1,10 +1,12 @@
 %% Based on the class file for LDV Forum -- Version 1.1 C. Kram & N. Bastron (2006)
 %% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch.
 
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jlcl} % does it have to be a class? (why not a style file?)
 
-\LoadClass[9pt,twoside,a5paper,smallheadings]{scrartcl}
+\LoadClass[paper=a5,pagesize,fontsize=9pt,headings=small,twoside]{scrartcl}
+%pagesize default since version 3.17
 
 
 \input{header.tex} % % % Why include that here?
@@ -22,10 +24,8 @@
   \RequirePackage[pdftex]{graphicx}
  \fi
 
-\RequirePackage[inner=1.4cm,outer=1.2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
-
-\RequirePackage[OT2, T1]{fontenc}
-\RequirePackage[utf8]{inputenc}           %% encoding
+\RequirePackage[T1]{fontenc} %% use [OT2,T1] for cyrillic characters
+\RequirePackage[utf8]{inputenc} %% encoding %% [utf8x] causes option clash
 
 
 \RequirePackage{setspace,ellipsis,url,fixltx2e,ae,natbib,tabularx,ntheorem,graphicx}
@@ -119,6 +119,9 @@
 
 %% load lmodern after microtype to avoid 'auto expansion' error
 \RequirePackage{lmodern}
+
+%% load geometry after the rest
+\RequirePackage[inner=1.4cm,outer=1.2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
 
 %\RequirePackage[bookmarks=true,breaklinks=true,pdftex]{hyperref}
