@@ -1,9 +1,13 @@
-\NeedsTeXFormat{LaTeX2e} 
-\ProvidesClass{ldv_forum}[2006/10/24 LDV Forum --
-Version 1.1 C. Kram & N. Bastron]
+%% Based on the class file for LDV Forum -- Version 1.1 C. Kram & N. Bastron (2006)
+%% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{jlcl} % does it have to be a class? (why not a style file?)
 
 \LoadClass[9pt,twoside,a5paper,smallheadings]{scrartcl}
-\input{articledata.tex}
+
+
+\input{header.tex} % % % Why include that here?
 
 
 %%==========================================================================================%%
@@ -24,16 +28,7 @@ Version 1.1 C. Kram & N. Bastron]
 \RequirePackage[utf8]{inputenc}           %% encoding
 
 
-
-%%-- BEGIN HACK (jurish, 2010-10-12)
-%% + loading lmodern here breaks eco/microtype scaling on debian/lenny
-%%   with error message:
-%%    ! pdfTeX error (font expansion): auto expansion is only possible with scalable fonts
-%% + workaround: delay loading lmodern until after eco and microtype have been loaded (below)
-%\RequirePackage{lmodern,setspace,ellipsis,url,fixltx2e,ae,natbib,tabularx,ntheorem,graphicx} %%-- orig
-\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,natbib,tabularx,ntheorem,graphicx} %%-- new (jurish hack)
-%%-- END HACK
-
+\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,natbib,tabularx,ntheorem,graphicx}
 
 
 \RequirePackage[pdftex]{xcolor}         %% Grauwerte
@@ -56,7 +51,7 @@ Version 1.1 C. Kram & N. Bastron]
 {JLCL}}}}  %%<========== links/innen LDV...
 
 \fancyfoot[LO]{\sffamily{\bfseries{\textcolor{black}
-{JLCL \ldvforumyear ~-- Band \ldvforumvolume$\,$(\ldvforumnumber)}}}}        %%<========== rechts/innen
+{JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber)}}}}        %%<========== rechts/innen
 
 \fancyfoot[LE]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
 {\thepage}}}}}}     %%<========== Seitenzahl
@@ -72,7 +67,7 @@ Version 1.1 C. Kram & N. Bastron]
     {JLCL}}}}  %%<========== links/innen LDV...
 
     \fancyfoot[LO]{\sffamily{\bfseries{\textcolor{black}
-    {JLCL \ldvforumyear    ~-- Band \ldvforumvolume$\,$(\ldvforumnumber) -- \thepage-\pageref{LastPage} }}}}        %%<========== rechts/innen
+    {JLCL \jlclyear    ~-- Band \jlclvolume$\,$(\jlclnumber) -- \thepage-\pageref{LastPage} }}}}        %%<========== rechts/innen
 
     %\fancyfoot[LE]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
     %{\thepage}}}}}}     %%<========== Seitenzahl
@@ -122,10 +117,8 @@ Version 1.1 C. Kram & N. Bastron]
 \RequirePackage[scaled=0.9]{helvet}
 \RequirePackage{microtype}          %% optischer Randausgleich und minimale Skalierung.
 
-%%-- BEGIN HACK (jurish, 2010-10-12)
-%% + load lmodern after microtype to avoid 'auto expansion' error on debian lenny
-\RequirePackage{lmodern} %%-- new
-%%-- END HACK
+%% load lmodern after microtype to avoid 'auto expansion' error
+\RequirePackage{lmodern}
 
 
 %\RequirePackage[bookmarks=true,breaklinks=true,pdftex]{hyperref}
