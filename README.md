@@ -1,30 +1,31 @@
-# jlcl-style
+# JLCL LaTeX style
 
 
-### Description
+## Description
 
-Experiments to modernize the LaTeX class of the [Journal for Language Technology and Computational Linguistics (JLCL)](http://jlcl.org), a scientific journal published by the [German Society for Computational Linguistics & Language Technology](http://gscl.org).
+Experiments to modernize the LaTeX class/style of the [Journal for Language Technology and Computational Linguistics (JLCL)](http://jlcl.org), a scientific journal published by the [German Society for Computational Linguistics & Language Technology](http://gscl.org).
 
 
 
-### Task list
+## Task list
 
 
 #### General syntax
 
-- [x] scrartcl warnings (deprecated syntax)
-- [ ] typearea (font size) and LaTeX (page size) warnings
+- [x] *scrartcl* warnings (deprecated syntax)
+- [ ] *typearea* font size and DIV size warnings
+- [ ] font command "\it" warning although it is nowhere in the sources
 
 
 #### Compatibility issues
 
-- [ ] warnings about scrartcl+fancyhdr combination in compilation log
-- [ ] sections when packages required for Arabic are used 
+- [ ] warning about *scrartcl+fancyhdr* combination in compilation log
+- [ ] sections undefined and falsely numbered when babel-arabic is used
 - [ ] ...
 
 
 
-### Useful links
+## Useful links
 
 * [Typesetting a document using Arabic script](http://tex.stackexchange.com/questions/12347/typesetting-a-document-using-arabic-script)
 * [Understanding headers in scrartcl (about fancyhdr)](http://tex.stackexchange.com/questions/283670/understanding-headers-in-scrartcl)

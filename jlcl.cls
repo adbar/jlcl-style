@@ -5,9 +5,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jlcl} % does it have to be a class? (why not a style file?)
 
-\LoadClass[paper=a5,pagesize,fontsize=9pt,headings=small,twoside]{scrartcl}
-%pagesize default since version 3.17
 
+\LoadClass[a5paper,pagesize,fontsize=9pt,headings=small,twoside]{scrartcl}
+% pagesize default since version 3.17?
+% paper=A5 does not seem to work
+% DIV=something?
 
 \input{header.tex} % % % Why include that here?
 
