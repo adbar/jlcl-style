@@ -1,5 +1,5 @@
 %% Based on the class file for LDV Forum -- Version 1.1 C. Kram & N. Bastron (2006)
-%% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch.
+%% Contributions by Adrien Barbaresi, Kais Haddar, Bryan Jurish.
 
 
 \NeedsTeXFormat{LaTeX2e}

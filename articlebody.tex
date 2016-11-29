@@ -1,6 +1,9 @@
 \documentclass{jlcl}
 %%==========================================================================================%%
 %%==========================================================================================%%
+%% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
+
+
 \title{\articletitle}
 \author{AUTHOR NAME\\
 AUTHOR INSTITUTION\\
@@ -8,8 +11,18 @@ AUTHOR INSTITUTION\\
 AUTHOR 2 NAME\\
 AUTHOR 2 INSTITUTION\\
  \texttt{AUTHOR 2 EMAIL}}
+ 
 %%==========================================================================================%%
 \begin{document}
+\selectlanguage{english}
+
+% arabtex
+\setarab % choose the language specific conventions
+\vocalize % switch diacritics for short vowels on
+\transtrue % additionally switch on the transliteration
+% \arabtrue % default
+
+
 \setcounter{page}{1}
 \thispagestyle{firstpage}
 
@@ -29,15 +42,15 @@ This article describes the Arabic alphabet.
 
 \subsection{The Alphabet}
 
-The Arabic alphabet has 29 letters including the Hamza (\textRL{ء}), consonants and three long vowels (\textAR{ا، و، ي}).
-The short vowels or vowel signs are not part of alphabet but they are merely oral.
-Along with the three short vowels (\textRL{ـَ ـُ ـِ}), the Arabic script has other phonetic symbols, together known as diacritic marks.
-Diacritics are sound symbols represented as strokes that are placed above or below the letter.
+%The Arabic alphabet has 29 letters including the Hamza (\textRL{ء}), consonants and three long vowels (\textAR{ا، و، ي}).
+%The short vowels or vowel signs are not part of alphabet but they are merely oral.
+%Along with the three short vowels (\textRL{ـَ ـُ ـِ}), the Arabic script has other phonetic symbols, together known as diacritic marks.
+%Diacritics are sound symbols represented as strokes that are placed above or below the letter.
 
 % % % solution found on http://tex.stackexchange.com/questions/141832/babel-arabic-changes-enumeration-level
 This is a test: \RL{b.hr lw.t}
 
-
+\begin{RLtext}'imtala'ati al-_dAkiraTu al-'iliktrUniyyaTu bi-mo`.tayAtiN `a^swA'iyyaTiN\end{RLtext}
 
 \nocite{*}
 \bibliographystyle{apa}
