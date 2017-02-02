@@ -1,4 +1,58 @@
 \documentclass{jlcl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% information to be completed by the author(s): %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Full author names, separated by commas
+%\newcommand{\authornames}{INSERT FULL AUTHOR NAMES}
+\newcommand{\authornames}{Author One and Author Two}
+
+
+%% authors' last names, separated by commas
+%\newcommand{\authorlastnames}{INSERT AUTHORS' LAST NAMES}
+\newcommand{\authorlastnames}{One and Two}
+
+
+%% Full article title, as it appears on the first page of the article
+%\newcommand{\articletitle}{INSERT FULL ARTICLE TITLE}
+\newcommand{\articletitle}{Arabic Diacritization}
+
+
+%% short article title, as it appears in the header of every second article page
+%\newcommand{\shortarticletitle}{INSERT SHORT ARTICLE TITLE}
+\newcommand{\shortarticletitle}{Arabic Diacritization}
+
+
+%% load babel package for the language the article is written in,
+%% please refer to
+%% http://tug.ctan.org/tex-archive/macros/latex/required/babel/babel.pdf
+%% for other language options and add languages, if necessary
+\RequirePackage[utf8]{inputenc}
+%\RequirePackage[ngerman, english]{babel}     %% english & ngerman
+
+
+% % % % % CUSTOM % % % % %
+%%please add any packages your article needs which are not already included in the class
+%\usepackage{}
+
+%=======Arabic=======
+\usepackage{arabtex}
+\usepackage[ngerman, main=english]{babel} % arabic => problem with sections
+\usepackage[LFE,LAE,T1]{fontenc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% information to be completed by the typesetter(s): %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\jlclvolume}{32}
+
+\newcommand{\jlclnumber}{1}
+
+\newcommand{\jlclyear}{2017}
+
+\newcommand{\jlclfirstpage}{1}
 %%==========================================================================================%%
 %%==========================================================================================%%
 %% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.

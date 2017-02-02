@@ -11,7 +11,25 @@
 % paper=A5 does not seem to work
 % DIV=something?
 
-\input{header.tex} % % % Why include that here?
+
+% % % possible solution for [arabic]{babel}, not currently working
+% % % http://tex.stackexchange.com/questions/238225/arabic-support-in-babel-mess-up-chapter-referencing
+
+%\makeatletter
+
+%\def\@section[#1]#2{%
+%\addtocontents{toc}{\xstring\select@language{\main@Arabi@language}}%
+%\if@rl\SAV@@section[\textRL{#1}]{\textRL{#2}}%
+%\else\SAV@@section[\textLR{#1}]{\textLR{#2}}%
+%\fi}
+
+%\def\@ssection#1{%
+%\addtocontents{toc}{\xstring\select@language{\main@Arabi@language}}%
+%\if@rl\SAV@ssection{\textRL{#1}}%
+%\else\SAV@ssection{\textLR{#1}}%
+%\fi}
+
+%\makeatother
 
 
 %%==========================================================================================%%
