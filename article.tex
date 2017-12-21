@@ -28,8 +28,8 @@
 %% please refer to
 %% http://tug.ctan.org/tex-archive/macros/latex/required/babel/babel.pdf
 %% for other language options and add languages, if necessary
-\RequirePackage[utf8]{inputenc}
-%\RequirePackage[ngerman, english]{babel}     %% english & ngerman
+\usepackage[utf8]{inputenc}
+%\usepackage[ngerman,english]{babel}     %% english & ngerman
 
 
 % % % % % CUSTOM % % % % %
@@ -37,6 +37,7 @@
 %\usepackage{}
 
 %=======Arabic=======
+%% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
 \usepackage{arabtex}
 \usepackage[ngerman, main=english]{babel} % arabic => problem with sections
 \usepackage[LFE,LAE,T1]{fontenc}
@@ -55,7 +56,6 @@
 \newcommand{\jlclfirstpage}{1}
 %%==========================================================================================%%
 %%==========================================================================================%%
-%% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
 
 
 \title{\articletitle}
@@ -68,7 +68,6 @@ AUTHOR 2 INSTITUTION\\
  
 %%==========================================================================================%%
 \begin{document}
-\selectlanguage{english}
 
 % arabtex
 \setarab % choose the language specific conventions
@@ -86,6 +85,9 @@ AUTHOR 2 INSTITUTION\\
 %%==========================================================================================%%
 %%           ARTICLE                                                                        %%
 %%==========================================================================================%%
+
+% to change language for babel package in the course of the article:
+%\selectlanguage{english}
 
 \section*{Abstract}
 This article describes the Arabic alphabet.
