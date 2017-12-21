@@ -1,15 +1,14 @@
 %% Based on the class file for LDV Forum -- Version 1.1 C. Kram & N. Bastron (2006)
-%% Contributions by Adrien Barbaresi, Kais Haddar, Bryan Jurish.
+%% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch.
 
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{jlcl} % does it have to be a class? (why not a style file?)
 
 
-\LoadClass[a5paper,pagesize,fontsize=9pt,headings=small,twoside]{scrartcl}
+\LoadClass[a5paper,pagesize,fontsize=9pt,headings=small,twoside,DIV=calc]{scrartcl}
 % pagesize default since version 3.17?
 % paper=A5 does not seem to work
-% DIV=something?
 
 
 % % % possible solution for [arabic]{babel}, not currently working
@@ -56,6 +55,19 @@
 
 \RequirePackage{lastpage}
 
+% % % required because of fancyhdr
+\makeatletter
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\makeatother
+
+
+% % % compatibility alert: TODO: replace it
 \RequirePackage{fancyhdr}           %% Kopf- und Fu{\ss}zeilengestaltung ...
 \pagestyle{fancy}               %% ...
 \fancyhead{}                    %% initialisieren der Kopfzeile
@@ -116,8 +128,8 @@
 \tolerance 300                  %% 1414 Bewertungsgrenzwert f\"{u}r noch zu akzeptierende schlecht umgebrochene Zeilen
 \hfuzz=0.2pt                    %% Grenze, ab der eine overfull hbox gemeldet wird
 \vfuzz=0.2pt                    %% Grenzwert, ab dem die \"{U}berf\"{u}llung einer \vbox protokolliert wird
-\hbadness 1414                  %% Grenzwert f\"{u}r �schlechte� Zeilen, bzw. Boxen
-\vbadness   1000                  %% Grenzwert f\"{u}r eine �schlechte� \vbox
+\hbadness 1414                  %% Grenzwert f\"{u}r schlechte Zeilen, bzw. Boxen
+\vbadness   1000                %% Grenzwert f\"{u}r eine schlechte \vbox
 \emergencystretch 1.3em         %% zus\"{a}tzlicher dynamischer Leerraum
 \hyphenpenalty=50               %% Strafpunkte bei Silbentrennung \"{u}ber Absatz hinweg
 \widowpenalty=9999              %% falls letzte Zeile auf neue Seite gebrochen wird.
