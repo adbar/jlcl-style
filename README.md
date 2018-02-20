@@ -16,14 +16,18 @@ Experiments to modernize the LaTeX class/style of the [Journal for Language Tech
 - [x] *typearea* font size warning
 - [x] *typearea*  DIV size warning
 - [X] manually add old font commands "\it" and "\rm" warning because of *fancyhdr*
+- [ ] URLs in bibliography (old apa package?)
+- [ ] authordata (affiliation, e-mail)
 - [ ] *pagesize* warning
 
 
 #### Compatibility issues
 
 - [ ] warning about *scrartcl+fancyhdr* combination
+- [ ] use of XeLaTeX (pdftex links in cls file)
 - [x] sections undefined and falsely numbered when babel-arabic is used (use arabtex instead)
 - [ ] line spacing when writing in other alphabets
+- [ ] spacing in titles (fix2..etc...)
 - [ ] ...
 
 
