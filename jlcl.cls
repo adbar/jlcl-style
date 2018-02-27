@@ -37,20 +37,24 @@
 %%==========================================================================================%%
 
 
-\ifx\pdftexversion\undefined
-  \RequirePackage[dvips]{graphicx}
- \else
-  \RequirePackage[pdftex]{graphicx}
- \fi
-
-\RequirePackage[T1]{fontenc} %% use [OT2,T1] for cyrillic characters
-\RequirePackage[utf8]{inputenc} %% encoding %% [utf8x] causes option clash
+%\ifx\pdftexversion\undefined
+%  \RequirePackage[dvips]{graphicx}
+% \else
+%  \RequirePackage[pdftex]{graphicx}
+% \fi
+\RequirePackage{graphicx}
 
 
-\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,tabularx,ntheorem,graphicx}
+%\RequirePackage[T1]{fontenc} %% use [OT2,T1] for cyrillic characters
+%\RequirePackage[utf8]{inputenc} %% encoding %% [utf8x] causes option clash
 
 
-\RequirePackage[pdftex]{xcolor}         %% Grauwerte
+\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,tabularx,ntheorem}
+
+
+%% Grauwerte
+%\RequirePackage[pdftex]{xcolor}         
+\RequirePackage{xcolor}
 \definecolor{hell}{gray}{0.80}  %% ...
 
 \RequirePackage{lastpage}

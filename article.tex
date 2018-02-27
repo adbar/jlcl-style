@@ -29,6 +29,7 @@
 %% http://tug.ctan.org/tex-archive/macros/latex/required/babel/babel.pdf
 %% for other language options and add languages, if necessary
 \usepackage[utf8]{inputenc}
+\usepackage[LFE,LAE,T1]{fontenc}
 %\usepackage[ngerman,english]{babel}     %% english & ngerman
 \usepackage[ngerman, main=english]{babel} % arabic => problem with sections
 
@@ -41,7 +42,6 @@
 %% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
 \usepackage{arabtex}
 
-\usepackage[LFE,LAE,T1]{fontenc} %
 
 % % % TODO: add Chinese to test Unicode support
 
@@ -97,11 +97,11 @@ AUTHOR 2 INSTITUTION\\
 %\selectlanguage{english}
 
 \section*{Abstract}
-This article describes the Arabic alphabet.
+This article tests internationalization options for the JLCL class.
 
 
 
-\section{Introduction}
+\section{Arabic}
 
 \subsection{The Alphabet}
 
@@ -114,6 +114,22 @@ This article describes the Arabic alphabet.
 This is a test: \RL{b.hr lw.t}
 
 \begin{RLtext}'imtala'ati al-_dAkiraTu al-'iliktrUniyyaTu bi-mo`.tayAtiN `a^swA'iyyaTiN\end{RLtext}
+
+
+\section{Chinese}
+
+\subsection{Test}
+
+
+
+
+\section{Figures}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{Amiga_A1000.jpg}
+\caption{Amiga A1000 on display at the Musée Bolo (Lausanne), Wikimedia user Rama \newline https://commons.wikimedia.org/wiki/File:Amiga\_A1000\_IMG\_4277.jpg}
+\end{figure}
 
 \nocite{*}
 \bibliographystyle{apacite}
