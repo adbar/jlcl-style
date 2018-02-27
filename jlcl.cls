@@ -47,7 +47,7 @@
 \RequirePackage[utf8]{inputenc} %% encoding %% [utf8x] causes option clash
 
 
-\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,natbib,tabularx,ntheorem,graphicx}
+\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,tabularx,ntheorem,graphicx}
 
 
 \RequirePackage[pdftex]{xcolor}         %% Grauwerte

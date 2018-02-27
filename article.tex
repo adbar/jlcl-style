@@ -16,12 +16,12 @@
 
 %% Full article title, as it appears on the first page of the article
 %\newcommand{\articletitle}{INSERT FULL ARTICLE TITLE}
-\newcommand{\articletitle}{Arabic Diacritization}
+\newcommand{\articletitle}{Internationalization}
 
 
 %% short article title, as it appears in the header of every second article page
 %\newcommand{\shortarticletitle}{INSERT SHORT ARTICLE TITLE}
-\newcommand{\shortarticletitle}{Arabic Diacritization}
+\newcommand{\shortarticletitle}{Internationalization}
 
 
 %% load babel package for the language the article is written in,
@@ -30,17 +30,24 @@
 %% for other language options and add languages, if necessary
 \usepackage[utf8]{inputenc}
 %\usepackage[ngerman,english]{babel}     %% english & ngerman
-
+\usepackage[ngerman, main=english]{babel} % arabic => problem with sections
 
 % % % % % CUSTOM % % % % %
 %%please add any packages your article needs which are not already included in the class
 %\usepackage{}
 
+
 %=======Arabic=======
 %% Contributions by Adrien Barbaresi, Kais Haddar, Osama Hamed.
 \usepackage{arabtex}
-\usepackage[ngerman, main=english]{babel} % arabic => problem with sections
-\usepackage[LFE,LAE,T1]{fontenc}
+
+\usepackage[LFE,LAE,T1]{fontenc} %
+
+% % % TODO: add Chinese to test Unicode support
+
+
+% % % Bibliography
+\usepackage{apacite}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,8 +116,10 @@ This is a test: \RL{b.hr lw.t}
 \begin{RLtext}'imtala'ati al-_dAkiraTu al-'iliktrUniyyaTu bi-mo`.tayAtiN `a^swA'iyyaTiN\end{RLtext}
 
 \nocite{*}
-\bibliographystyle{apa}
-{\small \bibliography{references}}
+\bibliographystyle{apacite}
+\bibliography{references}
+
+%\printbibliography
 
 
 \end{document}

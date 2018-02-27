@@ -16,7 +16,7 @@ Experiments to modernize the LaTeX class/style of the [Journal for Language Tech
 - [x] *typearea* font size warning
 - [x] *typearea*  DIV size warning
 - [X] manually add old font commands "\it" and "\rm" warning because of *fancyhdr*
-- [ ] URLs in bibliography (old apa package?)
+- [X] URLs in bibliography (old apa package?)
 - [ ] authordata (affiliation, e-mail)
 - [ ] *pagesize* warning
 
