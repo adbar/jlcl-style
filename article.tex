@@ -33,9 +33,11 @@
 %\usepackage[ngerman,english]{babel}     %% english & ngerman
 \usepackage[ngerman, main=english]{babel} % arabic => problem with sections
 
+
 % % % % % CUSTOM % % % % %
 %%please add any packages your article needs which are not already included in the class
 %\usepackage{}
+\usepackage{ifxetex}
 
 
 %=======Arabic=======
@@ -44,6 +46,12 @@
 
 
 % % % TODO: add Chinese to test Unicode support
+\ifxetex
+%\usepackage{xeCJK}
+%\setCJKmainfont{SimSun}
+\else
+\usepackage{CJKutf8}
+\fi
 
 
 % % % Bibliography
@@ -97,7 +105,7 @@ AUTHOR 2 INSTITUTION\\
 %\selectlanguage{english}
 
 \section*{Abstract}
-This article tests internationalization options for the JLCL class.
+This article runs a series of tests to check internationalization and compatibility issues in the JLCL class.
 
 
 
@@ -120,7 +128,15 @@ This is a test: \RL{b.hr lw.t}
 
 \subsection{Test}
 
-
+\ifxetex
+does not currently work with XeTeX.
+%文章内容。 % % does not work
+\else
+\begin{CJK*}{UTF8}{gbsn}
+文章内容。
+%\clearpage
+\end{CJK*}
+\fi
 
 
 \section{Figures}
@@ -128,8 +144,10 @@ This is a test: \RL{b.hr lw.t}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{Amiga_A1000.jpg}
-\caption{Amiga A1000 on display at the Musée Bolo (Lausanne), Wikimedia user Rama \newline https://commons.wikimedia.org/wiki/File:Amiga\_A1000\_IMG\_4277.jpg}
+\caption{Amiga A1000 on display at the Mus\'{e}e Bolo (Lausanne), Wikimedia user Rama \newline https://commons.wikimedia.org/wiki/File:Amiga\_A1000\_IMG\_4277.jpg}
 \end{figure}
+
+
 
 \nocite{*}
 \bibliographystyle{apacite}
