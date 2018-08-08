@@ -9,8 +9,13 @@ Experiments to modernize the LaTeX class/style of the [Journal for Language Tech
 
 ## Task list
 
+#### General layout
 
-#### General syntax
+- [x] Title page in LaTeX
+- [x] Example of editorial
+
+
+#### LaTeX syntax
 
 - [x] *scrartcl* warnings (deprecated syntax)
 - [x] *typearea* font size warning
