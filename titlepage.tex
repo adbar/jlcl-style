@@ -2,6 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
 
+\usepackage[rm]{quattrocento}
+\usepackage{tgheros}
+
 \definecolor{jlclgreen}{RGB}{0,139,0}
 
 \newcommand{\authornames}{}
@@ -28,6 +31,8 @@
 
 \vskip .5em
 
+\fontfamily{lmr}\selectfont
+
 \noindent Volume \jlclvolume \hfill \textemdash \hfill Number \jlclnumber \hfill \textemdash \hfill \jlclyear \hfill \textemdash  \hfill ISSN 2190-6858
 
 %\vskip .25em
@@ -38,13 +43,26 @@
 
 \begin{center}
 
-{\fontsize{35}{30}\selectfont \textsf{J\textcolor{gray}{L}\textcolor{jlclgreen}{CL}}}
-\vskip .3em
+%{\fontsize{35}{30}\selectfont \textsf{J\textcolor{gray}{L}\textcolor{jlclgreen}{CL}}}
+%\vskip .4em
+%Journal for Language Technology\\
+%and Computational Linguistics
+
+{\fontfamily{qhv}\fontsize{35}{30}\selectfont \textbf{\textsf{J\hskip 0.08em\textcolor{gray}{L}\hskip 0.08em\textcolor{jlclgreen}{C\hskip 0.08em L}}}}
+\vskip .4em
+{\quattrocento\selectfont
 Journal for Language Technology\\
 and Computational Linguistics
+}
+
+\end{center}
+
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\rmdefault}
 
 \vskip 0.15\paperheight
 
+\begin{center}
 {\fontsize{20}{20}\selectfont  Title of the volume}
 \end{center}
 
