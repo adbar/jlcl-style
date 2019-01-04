@@ -1,5 +1,5 @@
 %% Based on the class file for LDV Forum -- Version 1.1 C. Kram & N. Bastron (2006)
-%% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch.
+%% Contributions by Adrien Barbaresi, Osama Hamed, Bryan Jurish, Torsten Zesch, Kay-Michael Würzner.
 
 
 \NeedsTeXFormat{LaTeX2e}
@@ -70,6 +70,8 @@
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \makeatother
 
+%% load geometry early
+\RequirePackage[inner=1.4cm,outer=1.2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
 % % % compatibility alert: TODO: replace it
 \RequirePackage{fancyhdr}           %% Kopf- und Fu{\ss}zeilengestaltung ...
@@ -155,9 +157,6 @@
 
 %% load lmodern after microtype to avoid 'auto expansion' error
 \RequirePackage{lmodern}
-
-%% load geometry after the rest
-\RequirePackage[inner=1.4cm,outer=1.2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
 
 %\RequirePackage[bookmarks=true,breaklinks=true,pdftex]{hyperref}
