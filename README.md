@@ -3,16 +3,19 @@
 
 ## Description
 
-Experiments to modernize the LaTeX class/style of the [Journal for Language Technology and Computational Linguistics (JLCL)](http://jlcl.org), a scientific journal published by the [German Society for Computational Linguistics & Language Technology](http://gscl.org).
+The [Journal for Language Technology and Computational Linguistics (JLCL)](http://jlcl.org) is an Open Access journal supported by the German Society for Computational Linguistics & Language Technology](http://gscl.org).
 
+This repository documents the current state of the LaTeX class/style used to write articles and bundle issues.
 
 
 ## Task list
 
 #### General layout
 
-- [x] Title page in LaTeX
-- [x] Example of editorial
+- [x] LaTeX-generated logo
+- [x] title page in LaTeX
+- [x] example of editorial
+- [ ] instructions to finalize an issue
 
 
 #### LaTeX syntax
@@ -20,7 +23,7 @@ Experiments to modernize the LaTeX class/style of the [Journal for Language Tech
 - [x] *scrartcl* warnings (deprecated syntax)
 - [x] *typearea* font size warning
 - [x] *typearea*  DIV size warning
-- [X] manually add old font commands "\it" and "\rm" warning because of *fancyhdr*
+- [X] manually add old font commands "\it" and "\rm", warning because of *fancyhdr*
 - [X] URLs in bibliography (solved by *apacite*)
 - [ ] authordata (affiliation, e-mail)
 - [ ] *pagesize* warning
