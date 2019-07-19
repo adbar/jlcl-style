@@ -53,74 +53,37 @@
 
 
 %% Grauwerte
-%\RequirePackage[pdftex]{xcolor}         
+%\RequirePackage[pdftex]{xcolor}
 \RequirePackage{xcolor}
 \definecolor{hell}{gray}{0.80}  %% ...
 
 \RequirePackage{lastpage}
 
-% % % required because of fancyhdr
+% % % required because of arabtex
 \makeatletter
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
-\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
-\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
 \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \makeatother
 
 %% load geometry early
 \RequirePackage[inner=1.4cm,outer=1.2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
 
-% % % compatibility alert: TODO: replace it
-\RequirePackage{fancyhdr}           %% Kopf- und Fu{\ss}zeilengestaltung ...
-\pagestyle{fancy}               %% ...
-\fancyhead{}                    %% initialisieren der Kopfzeile
-\fancyhead[RE]{\sffamily{\large{\textcolor{black} {\authorlastnames}}}}
-%%============ Autorenname
-
-\fancyhead[LO]{\sffamily{\large{\textcolor{black}
-{\shortarticletitle}}}}
-%%============ Dokumenttitel
-
-\fancyfoot{}                  %% initialisieren der Fu{\ss}zeile
-\fancyfoot[RE]{\sffamily{\bfseries{\textcolor{black}
-{JLCL}}}}  %%<========== links/innen LDV...
-
-\fancyfoot[LO]{\sffamily{\bfseries{\textcolor{black}
-{JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber)}}}}        %%<========== rechts/innen
-
-\fancyfoot[LE]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
-{\thepage}}}}}}     %%<========== Seitenzahl
-
-\fancyfoot[RO]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
-{\thepage}}}}}}     %%<========== Seitenzahl
-
-\fancypagestyle{firstpage}{%
-    \fancyhead{}
-    %\renewcommand{\headrulewidth}{0pt}
-    \fancyfoot{}                  %% initialisieren der Fu{\ss}zeile
-    \fancyfoot[RE]{\sffamily{\bfseries{\textcolor{black}
-    {JLCL}}}}  %%<========== links/innen LDV...
-
-    \fancyfoot[LO]{\sffamily{\bfseries{\textcolor{black}
-    {JLCL \jlclyear    ~-- Band \jlclvolume$\,$(\jlclnumber) -- \thepage-\pageref{LastPage} }}}}        %%<========== rechts/innen
-
-    %\fancyfoot[LE]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
-    %{\thepage}}}}}}     %%<========== Seitenzahl
-
-    %\fancyfoot[RO]{\sffamily{\bfseries{\newstylenums{\LARGE{\textcolor{black}
-    %{\thepage}}}}}}     %%<========== Seitenzahl
-}
-
-\renewcommand{\headrule}{{\color{hell} \hrule width \headwidth height
-\headrulewidth \vskip- \headrulewidth}}
-\renewcommand{\footrule}{{\color{hell} \vskip- \footruleskip\vskip-
-\footrulewidth \hrule width\headwidth height \footrulewidth\vskip\footruleskip}}
-
-\renewcommand{\headrulewidth}{4.4pt}  %% oberer Balken
-\renewcommand{\footrulewidth}{4.4pt}  %% unterer Balken
+\RequirePackage[headsepline=4.4pt,plainheadsepline,footsepline=4.4pt,plainfootsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setlength{\footheight}{14.1pt}
+\setkomafont{pagehead}{\normalfont\sffamily\large}
+\setkomafont{headsepline}{\color{hell}}
+\setkomafont{footsepline}{\vspace{6.6pt}\color{hell}}
+\setkomafont{pagefoot}{\normalfont\sffamily\bfseries}
+\lehead[]{}
+\rehead[]{\authorlastnames}
+\lohead[]{\shortarticletitle}
+\rohead[]{}
+\refoot[JLCL]{JLCL}
+\lofoot[JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber) -- \thepage--\pageref{LastPage}]
+       {JLCL \jlclyear ~-- Band \jlclvolume$\,$(\jlclnumber)}
+\lefoot[]{\newstylenums{\LARGE\thepage}}
+\rofoot[]{\newstylenums{\LARGE\thepage}}
 
 %\RequirePackage{endnotes}%             %% Endnoten ...
 % \renewcommand{\footnote}{\endnote}
