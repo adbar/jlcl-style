@@ -49,7 +49,7 @@
 %\RequirePackage[utf8]{inputenc} %% encoding %% [utf8x] causes option clash
 
 
-\RequirePackage{setspace,ellipsis,url,fixltx2e,ae,tabularx,ntheorem}
+\RequirePackage{setspace,ellipsis,url,ae,tabularx,ntheorem}
 
 
 %% Grauwerte
